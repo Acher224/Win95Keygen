@@ -28,7 +28,7 @@ def genSite():
 
 def genKey():
     key = 999
-    while sum_digits(key) % 7 != 0:
+    while key % 10 == 8 or key % 10 == 9 or key % 10 == 0 or sum_digits(key) % 7 != 0:
         key = random.randint(0, 9999999)
     else:
         return key
